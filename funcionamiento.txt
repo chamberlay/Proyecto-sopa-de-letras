@@ -1,0 +1,50 @@
+Basicamente lo que hace el codigo es bsucar dentro de una matriz ya creada
+en cuales posiciones se encuentra la primera letra de la palabra, en este 
+caso la letra "O".
+
+Para esto fueron creadas la misma cantidad de funciones como filas tiene la
+matriz. (1° error.). Una vez dentro de la funcion, como habiamos dicho antes
+se busca la primera letra recorriendo la cantidad de celdas. (2° error). 
+A continuacion el porque de cada variable. (aunque se pueden interpretar):
+
+contadorCeldas: se uso principalmente para llevar el conteo de las iteraciones
+y a su vez ayuda a grabar la posicion de la letra.
+
+arrayPosicion: se uso para grabar la posicion de la letra y se aplico el contador 
+"i" para guardar la posicion del grabado.
+
+contadorLetra: se uso para contar las veces en las que se encuentra la letra en 
+una misma fila. 
+
+primerPosicionX: se uso para guardar la posicion de la letra fuera del array (en
+una variable).
+
+Una vez tenemos todas las posiciones de la fila un if verifica que en la fila se 
+encuentre por lo menos una primera letra, en caso de que no se encuentre
+la letra en la fila, se reasigna el contadorPalabra en 0. (4° error).
+
+Posteriormente a traves de varios if se busca si alrededor de cada una de las 
+posiciones, se encuentra la letra "I" y la letra "E", si es correcto se agrega al
+contador de palabras. Se va buscando en sentido de las agujas del reloj y para 
+mayor comprension se usaron los puntos cardinales.(5° error).
+
+La funcion retorna el contador de palabras y al final se suman todos lo contadores
+de palabras de cada funcion. 
+ 
+
+1° error: si hubiera un input de la cantidad de filas, se podria crear de
+manera automatica una cantidad justa de funciones.
+
+2° error: si hubiera un input de cantidad de celdas se podria hacer el 
+bucle directamente con ese dato. 
+
+3° error: Todas las funciones cuentan con practicamente el mismo codigo,
+no se decidio llamar en diferentes oportunidades la misma funcion debido a 
+que no econtre manera de que una vez que el bucle termine en una fila, 
+pase a la siguiente.
+
+4° error: si dentro de una misma fila hubiera mas de una letra, se debe crear 
+nuevas variables para guardar cada una de esas posiciones.
+
+5° error: debe haber una manera mas logica de ahorrarnos todos esos if. Por cada 
+posicion que se consiga en la fila, se debe crear todos los if. 
